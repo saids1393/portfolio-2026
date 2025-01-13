@@ -1,6 +1,6 @@
-import { BiLogoTypescript, BiLogoJavascript, BiSolidFileCss, BiLogoTailwindCss, BiLogoReact } from "react-icons/bi"
-import { FaHtml5 } from "react-icons/fa";
-import { SiPhp, SiMysql } from "react-icons/si";
+import { BiLogoJavascript, BiSolidFileCss, BiLogoTailwindCss, BiLogoReact } from "react-icons/bi"
+import { FaHtml5, FaSymfony } from "react-icons/fa";
+import { SiPhp} from "react-icons/si";
 import { PiFileSqlFill } from "react-icons/pi";
 import { motion } from "framer-motion";
 
@@ -70,7 +70,7 @@ const Tech = () => {
           whileInView="visible"
           transition={{duration:1}}
         >
-            <BiLogoTypescript className="cursor-pointer text-[80px] text-sky-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
+            <FaSymfony className="cursor-pointer text-[60px] text-sky-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
         <motion.div
           variants={variants}

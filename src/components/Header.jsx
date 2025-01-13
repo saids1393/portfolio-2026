@@ -72,7 +72,7 @@
                       </li>
                       <li className='navbar__item slideInDown-4 transition-all duration-300 hover:text-red-500'>
                           <a href="#projects" className='navbar__link' onClick={handleLinkClick}>
-                          Projet
+                          Projets
                           </a>
                       </li>
                       <li className='navbar__item slideInDown-4 transition-all duration-300 hover:text-red-500'>

@@ -24,7 +24,21 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, rgb(0, 62, 196), rgb(184, 0, 153));
+  background: linear-gradient(to bottom, rgb(0, 62, 196), rgb(184, 0, 92));
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 100%;
+  animation: gradient-shift 5s linear infinite;
 }
 
 html {
