@@ -1,4 +1,3 @@
-//Footer
 const Contact = () => {
     return (
       <section id="contact" className="flex min-h-[70vh] min-w-full items-center justify-center z-0">
