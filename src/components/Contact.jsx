@@ -1,22 +1,37 @@
-const Contact = () => {
-    return (
-      <section id="contact" className="flex min-h-[70vh] min-w-full items-center justify-center z-0">
-        <div className="flex flex-col items-center justify-center gap-3 space-y-6 p-14">
-          <h2 className="text-center text-5xl md:text-7xl">
-            <span className="bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent">
-      Go !
-            </span>
-          </h2>
-            <p className="text-center text-lg font-semibold text-gray-500">
-            Envie de discuter ? 
-            Envoyez-moi un e-mail via ce bouton et je répondrais dès que je pourrais.
-            </p>
-            <a href="mailto:soidroudinesaid51@gmail.com" className='text-nowrap rounded-lg border border-indigo-600 bg-black px-5 py-3 text-lg font-bold text-white shadow-lg shadow-indigo-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-600'>
-              Contactez-Moi
-            </a>
-        </div>
-      </section>
-    )
-  }
+import React from 'react';
 
-  export default Contact
+const Contact = () => {
+  return (
+    <section id="contact" className="py-24 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Contact</h2>
+        <div className="space-y-6">
+          <div className="flex items-start gap-4">
+            <div className="text-gray-700 flex-1">
+              <p className="font-semibold text-gray-900 mb-1">Email:</p>
+              <a
+                href="mailto:soidroudinesaid51@gmail.com"
+                className="text-indigo-600 hover:text-indigo-700"
+              >
+                soidroudinesaid51@gmail.com
+              </a>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="text-gray-700 flex-1">
+              <p className="font-semibold text-gray-900 mb-1">Phone:</p>
+              <a
+                href="tel:+33766445427"
+                className="text-indigo-600 hover:text-indigo-700"
+              >
+                +33 7 66 44 54 27
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Contact;

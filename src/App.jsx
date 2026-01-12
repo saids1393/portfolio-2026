@@ -1,31 +1,28 @@
-import Header from "./components/Header";
+import React from 'react';
 import Hero from "./components/Hero";
-import Tech from "./components/Tech";
+import About from "./components/About";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Skills from "./components/Skills";
 import Contact from "./components/Contact";
-import './assets/css/style.css';
+
 function App() {
   return (
-    <>
-    <div id ="home"></div>
-  <div className="fixed inset-0 -z-50 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"> </div>
-    <header>
-       <Header/>
-       </header>
-       <main className="flex flex-col items-center px-4 md:px-8 lg:px-16">
-       <Hero/>
-       <Tech/>
-       <Projects/>
-       </main>
-      
-       <footer>
-       <Contact/>
-       </footer>
-       
-       
-  
-       </>
+    <div className="min-h-screen bg-gray-50">
+      <Hero />
+      <About />
+      <Projects />
+      <Experience />
+      <Education />
+      <Skills />
+      <Contact />
+
+      <footer className="py-8 text-center text-gray-500 text-sm border-t border-gray-200">
+        <p>&copy; 2025 Said Soidroudine. All rights reserved.</p>
+      </footer>
+    </div>
   );
-};
+}
 
 export default App;

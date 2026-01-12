@@ -1,60 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
+import React from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiGitlab } from 'react-icons/si';
 import image from '../assets/img/photo_4.jpeg';
 
 const Hero = () => {
-  const fullText = "Développeur Full-Stack, doté d’une grande autonomie, d’une expertise en front-end et de compétences en back-end, je gère efficacement mes responsabilités et relève de nouveaux défis. Mon adaptabilité et mes aptitudes en communication assurent une intégration rapide, une collaboration fluide et une performance constante, même sous pression.";
-  const [text, setText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    if (currentIndex < fullText.length) {
-      const timeout = setTimeout(() => {
-        setText(fullText.slice(0, currentIndex + 1));
-        setCurrentIndex(currentIndex + 1);
-      }, 40);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex, fullText]);
-
   return (
-    <section className="mt-[100px] px-16 flex min-h-screen w-full items-center justify-center pb-8 md:px-32 z-0">
-      <div className="flex flex-col items-center justify-center gap-10 text-white">
-        <motion.div
-          initial={{y: -50, opacity: 0}}
-          animate={{y: 0, opacity:1}}
-          transition={{duration: 0.8, delay:0.2}}
-        >
-          <a id="hero"
-            href="https://www.linkedin.com/in/soidroudine-said-329312242/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+    <section className="min-h-screen flex items-center justify-center pt-20 pb-16">
+      <div className="text-center max-w-4xl mx-auto px-4">
+        <img
+          src={image}
+          alt="Said Soidroudine"
+          className="w-40 h-40 rounded-full mx-auto mb-8 object-cover border-4 border-gray-100 shadow-sm"
+        />
+
+        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          Said Soidroudine
+        </h1>
+
+        <p className="text-xl md:text-2xl text-gray-600 mb-8 font-light">
+          Développeur Full-Stack
+        </p>
+
+        <div className="flex gap-4 justify-center mb-8">
+          <a
+            href="/cv-soidroudine-said-2026.pdf"
+            target="_blank"
+            className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center gap-2"
           >
-            <img 
-              src={image} 
-              alt="" 
-              className="w-[300px] cursor-pointer rounded-full shadow-xl shadow-indigo-900 transition-all duration-300 hover:translate-y-5 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-600 md/w-[350px] z-0"
-            />
+            Resume
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </a>
-        </motion.div>
-        <motion.div
-          initial={{y: 50, opacity: 0}}
-          animate={{y: 0, opacity:1}}
-          transition={{duration: 0.8, delay:0.2}}
-          className='flex max-w-[600px] flex-col items-center justify-center gap-3 text-center'
-        >
-          <h2 className='animate-gradient bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent text-5xl font-light md:text-7xl'>
-            Said Soidroudine
-          </h2>
-          <h3 className='animate-gradient bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent text-2xl md:text-3xl'>
-            Développeur Full-Stack
-          </h3>
-          <p className='md:text-base text-pretty text-sm text-gray-400'>
-            {text}
-            <span className="animate-pulse">|</span>
-          </p>
-        </motion.div>
+          <a
+            href="#contact"
+            className="px-6 py-3 bg-white text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+          >
+            Connect me
+          </a>
+        </div>
+
+        <div className="flex gap-6 justify-center">
+          <a
+            href="https://github.com/SaidS9113"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <FaGithub size={24} />
+          </a>
+          <a
+            href="https://gitlab.com/Said_Soidroudine"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <SiGitlab size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/soidroudine-said-329312242/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <FaLinkedin size={24} />
+          </a>
+        </div>
       </div>
     </section>
   );
