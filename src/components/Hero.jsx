@@ -5,8 +5,21 @@ import image from '../assets/img/photo_4.jpeg';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-16">
-      <div className="text-center max-w-4xl mx-auto px-4">
+    <section className="min-h-screen flex items-center justify-center pt-20 pb-16 relative overflow-hidden">
+      {/* Grid background pattern */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+          maskImage: 'linear-gradient(to left, black 50%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to left, black 50%, transparent 100%)'
+        }}
+      />
+      <div className="text-center max-w-4xl mx-auto px-4 relative z-10">
         <img
           src={image}
           alt="Said Soidroudine"

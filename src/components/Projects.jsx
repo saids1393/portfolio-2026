@@ -1,6 +1,6 @@
 import React from 'react';
 import image1 from '../assets/img/project-1-siteECommerce.png';
-import image2 from '../assets/img/api-rest-symfony-react.png';
+import image2 from '../assets/img/sportcars.png';
 import image3 from '../assets/img/mescertifs.png';
 import image4 from '../assets/img/methodeERPR.png';
 
