@@ -8,7 +8,7 @@ const Contact = () => {
         <div className="space-y-6">
           <div className="flex items-start gap-4">
             <div className="text-gray-700 flex-1">
-              <p className="font-semibold text-gray-900 mb-1">Email:</p>
+              <p className="font-semibold text-gray-900 mb-1">Email :</p>
               <a
                 href="mailto:soidroudinesaid51@gmail.com"
                 className="text-indigo-600 hover:text-indigo-700"
@@ -19,7 +19,7 @@ const Contact = () => {
           </div>
           <div className="flex items-start gap-4">
             <div className="text-gray-700 flex-1">
-              <p className="font-semibold text-gray-900 mb-1">Phone:</p>
+              <p className="font-semibold text-gray-900 mb-1">Téléphone :</p>
               <a
                 href="tel:+33766445427"
                 className="text-indigo-600 hover:text-indigo-700"

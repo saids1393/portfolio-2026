@@ -59,7 +59,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-24 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Expérience</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">

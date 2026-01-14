@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 import { SiGitlab } from 'react-icons/si';
 import image from '../assets/img/photo_4.jpeg';
 
@@ -36,11 +36,10 @@ const Hero = () => {
 
         <div className="flex gap-4 justify-center mb-8">
           <a
-            href="/cv-soidroudine-said-2026.pdf"
-            target="_blank"
+            href="#projects"
             className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium flex items-center gap-2"
           >
-            Resume
+            Projets
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -49,19 +48,11 @@ const Hero = () => {
             href="#contact"
             className="px-6 py-3 bg-white text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium"
           >
-            Connect me
+            Me contacter
           </a>
         </div>
 
         <div className="flex gap-6 justify-center">
-          <a
-            href="https://github.com/SaidS9113"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            <FaGithub size={24} />
-          </a>
           <a
             href="https://gitlab.com/Said_Soidroudine"
             target="_blank"
