@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import image1 from '../assets/img/project-1-siteECommerce.png';
 import image2 from '../assets/img/sportcars.png';
 import image3 from '../assets/img/mescertifs.png';
-import image5 from '../assets/img/site-vitrine-rabeimportance-design.PNG';
 import image6 from '../assets/img/dashboard-AppMescertifs.PNG';
+import imageLangProgress from '../assets/img/langprogress.png';
 
 const entrepriseProjects = [
   {
@@ -11,44 +11,49 @@ const entrepriseProjects = [
     title: "MesCertifs",
     date: "2025 - 2026",
     description: "Moteur de recherche référençant tous les organismes de formation et les certifications RNCP et RS actives uniquement.",
-    link: "https://mescertifs.fr"
+    link: "https://mescertifs.fr",
+    technologies: ["Next.js", "TypeScript", "Python", "Prisma"]
   },
   {
     image: image6,
     title: "AppMesCertifs",
     date: "2025 - 2026",
     description: "Dashboard de MesCertifs permettant aux organismes de référencer gratuitement leur structure et leurs formations.",
-    link: "https://app.mescertifs.fr"
+    link: "https://app.mescertifs.fr",
+    technologies: ["NestJS", "Python", "Appwrite", "TypeScript"]
   },
   {
     image: image1,
     title: "MielQualityS",
     date: "2024",
     description: "E-commerce développé durant stage avec CRUD et architecture MVC, front-end et back-end.",
-    link: "https://github.com/SaidS9113/Projet-Site-E-Commerce-PHP-Architecture-MVC"
+    link: "https://github.com/SaidS9113/Projet-Site-E-Commerce-PHP-Architecture-MVC",
+    technologies: ["PHP", "SQL", "MySQL", "GitHub"]
   }
 ];
 
 const personnelProjects = [
   {
-    image: image5,
-    title: "Arabe Importance",
+    image: imageLangProgress,
+    title: "LangProgress",
     date: "2025 - 2026",
-    description: "Site vitrine de la marque Arabe Importance, créatrice de la Méthode ERPR pour l'apprentissage de la langue arabe littéraire.",
-    link: "https://arabeimportance.fr"
+    description: "Plateforme automatisée et dynamique, modulable pour l'apprentissage de toutes les langues.",
+    link: "https://langprogress-s.vercel.app/",
+    technologies: ["Next.js", "TypeScript", "Prisma", "Tailwind"]
   },
   {
     image: image2,
     title: "SportCars",
     date: "2024 - 2025",
     description: "Site e-commerce de voitures de sport avec API REST, authentification JWT et CRUD administration responsive.",
-    link: "https://github.com/SaidS9113/API-SYMFONY-REACT"
+    link: "https://github.com/SaidS9113/API-SYMFONY-REACT",
+    technologies: ["Symfony", "React", "API REST", "JWT"]
   }
 ];
 
-const Carousel = ({ projects, title }) => {
+const Carousel = ({ projects, title, autoPlay = true }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
   const [isTransitioning, setIsTransitioning] = useState(true);
   
   // Grouper les projets par 2
@@ -151,12 +156,21 @@ const Carousel = ({ projects, title }) => {
                         <p className="text-gray-600 text-sm mb-3">
                           {project.description}
                         </p>
-                        <span className="text-indigo-600 text-sm font-medium flex items-center gap-1 hover:text-indigo-700">
-                          Voir plus
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </span>
+                        <div className="flex items-center justify-between">
+                          <span className="text-indigo-600 text-sm font-medium flex items-center gap-1 hover:text-indigo-700">
+                            Voir plus
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </span>
+                          <div className="flex gap-1 flex-wrap justify-end">
+                            {project.technologies?.map((tech, i) => (
+                              <span key={i} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </a>
                   ))}
@@ -218,8 +232,8 @@ const Projects = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Projets</h2>
         
-        <Carousel projects={entrepriseProjects} title="Projets Entreprise" />
         <Carousel projects={personnelProjects} title="Projets Personnels" />
+        <Carousel projects={entrepriseProjects} title="Projets Entreprise" autoPlay={false} />
       </div>
     </section>
   );
