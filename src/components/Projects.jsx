@@ -52,7 +52,6 @@ const personnelProjects = [
 ];
 
 const Carousel = ({ projects, title, autoPlay = true }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(autoPlay);
   const [isTransitioning, setIsTransitioning] = useState(true);
   
